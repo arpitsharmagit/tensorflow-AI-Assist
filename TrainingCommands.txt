@@ -1,0 +1,8 @@
+http://download.tensorflow.org/models/mobilenet_v1_1.0_224_frozen.tgz
+
+
+python tensorflow/examples/image_retraining/retrain.py --image_dir /arpitphotos --architecture mobilenet_1.0_224
+python tensorflow/examples/image_retraining/label_image.py --graph=/tmp/output_graph.pb --labels=/tmp/output_labels.txt --output_layer=final_result:0 --image=/arpitphotos/ArpitSharma/20882214_795059637343640_7194533053665622445_n.jpg
+
+
+python tensorflow/examples/image_retraining/label_image.py --graph=/tmp/output_graph.pb --labels=/tmp/output_labels.txt --output_layer=final_result:0 --image=/flower_photos/daisy/21652746_cc379e0eea_m.jpg
